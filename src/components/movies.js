@@ -5,15 +5,10 @@ class Movie extends Component {
   
   constructor(props){
       super(props);
-        this.state={
-           movies:[
-                {id:1,name:"Fast & Furious 9"},{id:2,name:"The Sucide Squad"},
-                {id:3,name:"No Time To Die"},{id:4,name:"The Little Things"}
-            ]
-        }   
+   
   }
   moviewShow=()=>{
-     return  this.state.movies.map(movie=>
+     return  this.props.data.map(movie=>
            <div> <Display   display={movie} /> </div>
      )
    }

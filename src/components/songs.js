@@ -7,16 +7,10 @@ class Songs extends Component{
    constructor(props){
 
     super(props);
-       this.state={
-
-            songs:[
-                {id:1,name:"Rain on Me"},{id:2,name:"Boyle Sever Kahramn Deniz" },{id:3,name:"Beatiful Mistakes"},{id:4,name:"Anyone"}
-            ]
-       }
-
+    
    }
    songsShow=()=>{
-     return  this.state.songs.map(song=>
+     return  this.props.data.map(song=>
            <div> <Display   display={song} /> </div>
      )
    }

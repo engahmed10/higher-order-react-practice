@@ -1,4 +1,4 @@
-import React, {COmponent} form "react"
+import React, {Component} from "react"
 
 
 const Hoc=(WrappedComponent,data)=>{
@@ -10,13 +10,14 @@ const Hoc=(WrappedComponent,data)=>{
                         data:data
                     }
             }
-
+render(){
            return  <>
                       <WrappedComponent data={this.state.data} {...this.props} />
                   </>
     }
 
 
+}
 }
 
 export default Hoc;
