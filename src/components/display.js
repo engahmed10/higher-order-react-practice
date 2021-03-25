@@ -1,12 +1,12 @@
 import React from 'react';
  
 
-const Show = ({show}) => {
+const Display = ({display}) => {
    
     return (
         <div>
             <tr>
-              <td>{show.name}</td>
+              <td>{display.name}</td>
             </tr>
         </div>
     );
@@ -14,4 +14,4 @@ const Show = ({show}) => {
  
 
  
-export default Show;
+export default Display;
