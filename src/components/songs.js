@@ -15,7 +15,7 @@ class Songs extends Component{
        }
 
    }
-   moviewShow=()=>{
+   songsShow=()=>{
      return  this.state.songs.map(song=>
            <div> <Display   display={song} /> </div>
      )
@@ -31,7 +31,7 @@ class Songs extends Component{
                             </tr>
                             </thead>
                             <tbody>
-                                {this.moviewShow()}
+                                {this.songsShow()}
                             </tbody>
                     </table>
                 </div>   
