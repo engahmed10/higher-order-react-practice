@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Display from  "./display"
 class TvShows extends Component {
-    constructor(props) {
-        super(props);
-      
-    }
+  
 
 shows=()=>{
    return   this.props.data.map(show=>{

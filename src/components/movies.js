@@ -2,11 +2,7 @@ import React, { Component } from 'react';
  import Display from  './display'
 
 class Movie extends Component {
-  
-  constructor(props){
-      super(props);
-   
-  }
+
   moviewShow=()=>{
      return  this.props.data.map(movie=>
            <div> <Display   display={movie} /> </div>
