@@ -1,14 +1,11 @@
 import React,{Component} from "react"
 import Display from  './display'
+import AddSong  from "./addsong"
 
 
 class Songs extends Component{
    
-   constructor(props){
 
-    super(props);
-    
-   }
    songsShow=()=>{
      return  this.props.data.map(song=>
            <div> <Display   display={song} /> </div>
@@ -28,9 +25,10 @@ class Songs extends Component{
                                 {this.songsShow()}
                             </tbody>
                     </table>
+
+                   < AddSong/>
                 </div>   
    }
-
 }
 
 export default Songs

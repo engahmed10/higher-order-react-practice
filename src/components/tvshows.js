@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Display from  "./display"
+
 class TvShows extends Component {
   
 
@@ -22,11 +23,10 @@ render() {
                 <tbody>
                     {this.shows()}
                 </tbody>
-            
         </table>
         </div>
-    );
-}
+    ); 
+ }
 }
 
 

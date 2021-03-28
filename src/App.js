@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import TvShows  from "./components/tvshows"
 import Songs  from "./components/songs"
 import Movies  from "./components/movies"
+import AddSong  from "./components/addsong"
+
 import Hoc from './hoc'
 import data from './data'
-
  
-
    const TvshowsHocs=  Hoc(
      TvShows,data.shows
    )   
@@ -21,6 +20,10 @@ import data from './data'
      Movies,data.movies
    )
 
+   const AddSongHocs=Hoc(
+     AddSong ,data.songs//.concat()
+   )
+
 function App() {
 console.log(data["movies"])
 
@@ -29,6 +32,7 @@ console.log(data["movies"])
      <TvshowsHocs/>
      <SongsHoc/>
      <MoviesHocs/>
+     <AddSongHocs/>
     </div>
   );
 }

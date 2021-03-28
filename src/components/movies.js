@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
- import Display from  './display'
+import Display from  './display'
 
 class Movie extends Component {
 
