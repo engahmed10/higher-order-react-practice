@@ -2,7 +2,7 @@ import './App.css';
 import TvShows  from "./components/tvshows"
 import Songs  from "./components/songs"
 import Movies  from "./components/movies"
-import AddSong  from "./components/addsong"
+import AddSong  from "./components/movies"
 
 import Hoc from './hoc'
 import data from './data'
@@ -12,7 +12,8 @@ import data from './data'
    )   
 
    const   SongsHoc =Hoc(
-     Songs,data.songs
+     Songs,data.songs,
+
    )   
 
 
@@ -20,19 +21,20 @@ import data from './data'
      Movies,data.movies
    )
 
-   const AddSongHocs=Hoc(
-     AddSong ,data.songs//.concat()
+
+   const AddSongsHoc=Hoc(
+     AddSong,data.songs
    )
 
+
+
 function App() {
-console.log(data["movies"])
 
   return (
     <div className="App">
      <TvshowsHocs/>
      <SongsHoc/>
      <MoviesHocs/>
-     <AddSongHocs/>
     </div>
   );
 }

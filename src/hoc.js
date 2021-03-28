@@ -12,14 +12,19 @@ const Hoc=(WrappedComponent,data)=>{
             }
 
         render(){
-            console.log("hocs",this.state.data)
-            return  <>
-                        <WrappedComponent data={this.state.data} {...this.props} />
-                    </>
+             console.log("HOC render")
+            return  <div>
+                        <WrappedComponent data={this.state.data} 
+                         />
+                    </div>
+        }
     }
-    }
-
 }
 
 export default Hoc;
+
+
+
+
+
 

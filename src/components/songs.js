@@ -5,6 +5,32 @@ import AddSong  from "./addsong"
 
 class Songs extends Component{
    
+  state={
+      id:"",
+      name:""
+  }
+
+  handleChange=(e)=>{
+
+          this.setState({
+             [e.target.name]:e.target.value
+             }
+          )
+           
+  }
+    
+
+   handleSubmit=(e)=>{
+            
+        e.preventDefault();
+        this.props.data.push(this.state);
+        
+          this.setState({
+             id:"",
+             name:"" 
+             }
+          )
+   }
 
    songsShow=()=>{
      return  this.props.data.map(song=>
@@ -13,6 +39,7 @@ class Songs extends Component{
    }
 
    render(){
+       console.log("ahmed render")
 
        return  <div>
                     <table style={{'border': '1px solid black'}}>
@@ -26,7 +53,8 @@ class Songs extends Component{
                             </tbody>
                     </table>
 
-                   < AddSong/>
+                   < AddSong  handleSubmit={this.handleSubmit}
+                      handleChange={ this.handleChange} />
                 </div>   
    }
 }
