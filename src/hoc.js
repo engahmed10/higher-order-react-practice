@@ -12,7 +12,6 @@ const Hoc=(WrappedComponent,data)=>{
             }
 
         render(){
-             console.log("HOC render")
             return  <div>
                         <WrappedComponent data={this.state.data} 
                          />

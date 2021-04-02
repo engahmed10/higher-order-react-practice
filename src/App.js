@@ -35,6 +35,7 @@ function App() {
      <TvshowsHocs/>
      <SongsHoc/>
      <MoviesHocs/>
+     <Movies/>
     </div>
   );
 }

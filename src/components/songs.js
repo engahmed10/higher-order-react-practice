@@ -9,53 +9,49 @@ class Songs extends Component{
       id:"",
       name:""
   }
-
   handleChange=(e)=>{
 
-          this.setState({
-             [e.target.name]:e.target.value
-             }
-          )
-           
+      this.setState({
+         [e.target.name]:e.target.value
+         }
+      )   
   }
     
-
    handleSubmit=(e)=>{
             
-        e.preventDefault();
-        this.props.data.push(this.state);
-        
-          this.setState({
-             id:"",
-             name:"" 
-             }
-          )
+      e.preventDefault();
+      this.props.data.push(this.state);
+      
+         this.setState({
+            id:"",
+            name:"" 
+            }
+         )
    }
 
    songsShow=()=>{
      return  this.props.data.map(song=>
-           <div> <Display   display={song} /> </div>
+           <div> <Display display={song} /> </div>
      )
    }
 
    render(){
-       console.log("ahmed render")
 
-       return  <div>
-                    <table style={{'border': '1px solid black'}}>
-                            <thead >
-                            <tr style={{'border': '1px solid black'}}>
-                            <th> Songs Name</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                {this.songsShow()}
-                            </tbody>
-                    </table>
+   return  <div>
+               <table style={{'border': '1px solid black'}}>
+                        <thead >
+                        <tr style={{'border': '1px solid black'}}>
+                        <th> Songs Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                           {this.songsShow()}
+                        </tbody>
+               </table>
 
-                   < AddSong  handleSubmit={this.handleSubmit}
-                      handleChange={ this.handleChange} />
-                </div>   
+            < AddSong  handleSubmit={this.handleSubmit}
+               handleChange={ this.handleChange} />
+            </div>   
    }
 }
 

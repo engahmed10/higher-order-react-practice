@@ -6,7 +6,7 @@ const Display = ({display}) => {
     return (
         <div>
             <tr>
-              <td>{display.name}</td>
+              <td>Afandy</td>
             </tr>
         </div>
     );
